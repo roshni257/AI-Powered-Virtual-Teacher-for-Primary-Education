@@ -9,7 +9,7 @@ An intelligent, multilingual educational platform that provides personalized tut
 
 ---
 
-## 🎯 Problem Statement
+##  Problem Statement
 
 **Educational Challenges Addressed:**
 - **Language Barriers**: 60+ million Gujarati speakers lack quality educational resources in their native language
@@ -28,7 +28,7 @@ An AI-powered virtual teacher that provides:
 
 ---
 
-## 🚀 Key Features
+##  Key Features
 
 ### 1. **Multilingual AI Tutoring**
 - Supports English and Gujarati languages
@@ -62,7 +62,7 @@ An AI-powered virtual teacher that provides:
 
 ---
 
-## 🛠️ Technology Stack
+##  Technology Stack
 
 ### **Frontend**
 - **React 19.1** - UI framework
@@ -96,7 +96,7 @@ An AI-powered virtual teacher that provides:
 
 ---
 
-## 📋 Prerequisites
+##  Prerequisites
 
 Before setting up the project, ensure you have the following installed:
 
@@ -235,7 +235,7 @@ Select option:
 
 ---
 
-## ▶️ Running the Application
+##  Running the Application
 
 ### **Start Backend Server**
 ```bash
@@ -259,7 +259,7 @@ Open your browser and navigate to `http://localhost:5173`
 
 ---
 
-## 📖 Usage Guide
+##  Usage Guide
 
 ### **Basic Workflow**
 
@@ -287,7 +287,7 @@ Supported formats:
 
 ---
 
-## 🗂️ Project Structure
+##  Project Structure
 
 ```
 project-root/
@@ -343,7 +343,7 @@ project-root/
 
 ---
 
-## 🔍 How It Works
+##  How It Works
 
 ### **Architecture Overview**
 
@@ -425,86 +425,6 @@ This project addresses multiple UN Sustainable Development Goal 4 targets:
 
 ---
 
-## 🐛 Troubleshooting
-
-### **Common Issues**
-
-#### **1. Tesseract Not Found**
-```
-Error: pytesseract.pytesseract.TesseractNotFoundError
-```
-**Solution**: Update paths in your scripts with correct Tesseract installation path:
-```python
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
-```
-
-#### **2. Poppler Not Found**
-```
-Error: Unable to get page count. Is poppler installed?
-```
-**Solution**: Update `vectordb_guj_batch.py` with correct Poppler path:
-```python
-POPPLER_PATH = r"C:\Program Files\poppler-25.07.0\Library\bin"
-```
-
-#### **3. CORS Errors**
-```
-Error: Access to fetch blocked by CORS policy
-```
-**Solution**: Ensure backend CORS settings allow frontend origin in `backend.py`:
-```python
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # Update if using different port
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-```
-
-#### **4. Voice Not Working**
-- **Chrome/Edge**: Ensure microphone permissions are granted
-- **Firefox**: May have limited Web Speech API support
-- **Safari**: Use latest version (14+)
-- Check browser console for specific errors
-
-#### **5. Avatar Not Loading**
-```
-Error: Failed to load GLB model
-```
-**Solution**: 
-- Ensure 3D model files are in `my-app/public/models/`
-- Check browser console for specific error messages
-- Try clearing browser cache
-- Verify file paths in avatar components
-
-#### **6. Empty Database**
-```
-Error: No documents found in database
-```
-**Solution**: Run database builder:
-```bash
-python vectordb_guj_batch.py
-```
-
-#### **7. Poor OCR Quality**
-If Gujarati text extraction is poor:
-- Increase DPI in `vectordb_guj_batch.py` (try 600 DPI)
-- Ensure Gujarati language data is installed for Tesseract
-- Check if PDF has text layer (use direct extraction instead of OCR)
-- Verify image preprocessing is working correctly
-
-#### **8. API Key Errors**
-```
-Error: Invalid API key
-```
-**Solution**:
-- Verify your Groq API key in `API_KEY.TXT`
-- Ensure no extra spaces or newlines in the file
-- Check if API key is active at [Groq Console](https://console.groq.com/)
-
----
-
 ## 📊 Performance Metrics
 
 - **Model Loading**: ~2-3s (first load, then cached)
@@ -522,7 +442,7 @@ This project is licensed under the MIT License.
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **Groq** - For providing fast LLM inference API
 - **HuggingFace** - For open-source embedding models
@@ -535,7 +455,7 @@ This project is licensed under the MIT License.
 
 ---
 
-## 📞 Contact
+## Contact
 
 **Project Maintainer**: Roshni  
 **GitHub**: [@roshni257](https://github.com/roshni257)  
@@ -544,4 +464,5 @@ This project is licensed under the MIT License.
 ---
 
 **Made with ❤️ for Quality Education (SDG 4)**
+
 
